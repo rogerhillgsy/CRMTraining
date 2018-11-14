@@ -1,0 +1,8 @@
+TypeError: Cannot read property 'setDisabled' of null
+    at Object.QALab.LockAccountNumber (https://rbh2.crm11.dynamics.com/%7B636778058290000638%7D/WebResources/cr766_Lab6BStart.js?ver=-1366896597:24:17)
+    at Object.QALab.OnFormLoad (https://rbh2.crm11.dynamics.com/%7B636778058290000638%7D/WebResources/cr766_Lab6BStart.js?ver=-1366896597:6:11)
+    at eval (eval at RunHandlerInternal (https://rbh2.crm11.dynamics.com/form/ClientApiWrapper.aspx?ver=-1366896597:154:1), <anonymous>:1:7)
+    at RunHandlerInternal (https://rbh2.crm11.dynamics.com/form/ClientApiWrapper.aspx?ver=-1366896597:160:1)
+    at RunHandlers (https://rbh2.crm11.dynamics.com/form/ClientApiWrapper.aspx?ver=-1366896597:118:1)
+    at OnScriptTagLoaded (https://rbh2.crm11.dynamics.com/form/ClientApiWrapper.aspx?ver=-1366896597:275:1)
+    at https://rbh2.crm11.dynamics.com/form/ClientApiWrapper.aspx?ver=-1366896597:244:1

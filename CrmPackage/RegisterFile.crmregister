@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="CRMTraining2.Workflows.dll" Id="00000000-0000-0000-0000-000000000000" IsolationMode="Sandbox" SourceType="Database">
+      <WorkflowTypes>
+        <clear />
+        <WorkflowType FriendlyName="Account Duplicate Checker" Name="AccountDuplicateChecker" Description="Check for duplicates on accounts" WorkflowActivityGroupName="CRMTraining" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.AccountDuplicateChecker" />
+        <WorkflowType FriendlyName="Account Duplicate Checker" Name="AccountDuplicateChecker" Description="Check for duplicates on accounts" WorkflowActivityGroupName="CRMTraining" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.AccountDuplicateChecker2" />
+      </WorkflowTypes>
+    </Solution>
+    <Solution Assembly="CRMTraining2.Plugins.dll" Id="3d6649a9-66b1-47c1-82ef-2dbb45bb4ae0" IsolationMode="Sandbox" SourceType="Database">
+      <PluginTypes>
+        <clear />
+        <Plugin Description="Plug-in to Create of contact" FriendlyName="Create of contact" Name="CRMTraining2.Plugins.AddressFromPostCodePlugin" Id="c6d7d497-ad08-43d6-bb71-b63c28fe9de2" TypeName="CRMTraining2.Plugins.AddressFromPostCodePlugin">
+          <Steps>
+            <clear />
+            <Step AsyncAutoDelete="false" Name="Create of contact" Description="Create of contact" Id="5e7b23f0-a6e7-e811-a971-0022480187f0" ImpersonatingUserId="00000000-0000-0000-0000-000000000000" MessageName="Create" Mode="Synchronous" PrimaryEntityName="contact" Rank="1" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly" MessageEntityId="00000000-0000-0000-0000-000000000000">
+              <Images />
+            </Step>
+            <Step AsyncAutoDelete="false" Name="Update of contact" Description="Update of contact" Id="9fc50816-a7e7-e811-a969-002248019881" ImpersonatingUserId="00000000-0000-0000-0000-000000000000" MessageName="Update" Mode="Synchronous" PrimaryEntityName="contact" Rank="1" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly" MessageEntityId="00000000-0000-0000-0000-000000000000">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+      </PluginTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows>
+    <XamlWorkflowSolution Assembly="CRMTraining2.Workflows.dll" />
+  </XamlWorkflows>
+</Register>

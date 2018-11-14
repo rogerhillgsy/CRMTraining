@@ -1,0 +1,843 @@
+﻿@model DynamicsLinq.Account
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LogicalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogicalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowVersion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowVersion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_AddressId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_AddressId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Composite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Composite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Line1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Line1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Line2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Line2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Line3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Line3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_PostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_PostOfficeBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_PostOfficeBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_PrimaryContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_PrimaryContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_StateOrProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_StateOrProvince)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Telephone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Telephone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Telephone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Telephone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_Telephone3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_Telephone3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_UPSZone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_UPSZone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1_UTCOffset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1_UTCOffset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_AddressId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_AddressId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Composite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Composite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Line1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Line1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Line2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Line2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Line3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Line3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_PostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_PostOfficeBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_PostOfficeBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_PrimaryContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_PrimaryContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_StateOrProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_StateOrProvince)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Telephone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Telephone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Telephone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Telephone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_Telephone3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_Telephone3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_UPSZone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_UPSZone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2_UTCOffset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2_UTCOffset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditOnHold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditOnHold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotBulkEMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotBulkEMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotBulkPostalMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotBulkPostalMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotEMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotEMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotFax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotFax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotPostalMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotPostalMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoNotSendMM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoNotSendMM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMailAddress1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMailAddress1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMailAddress2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMailAddress2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMailAddress3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMailAddress3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityImage_Timestamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityImage_Timestamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityImage_URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityImage_URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityImageId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityImageId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExchangeRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExchangeRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FollowEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FollowEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FtpSiteURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FtpSiteURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImportSequenceNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImportSequenceNumber)
+        </dd>
+
+      
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastOnHoldTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastOnHoldTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUsedInCampaign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUsedInCampaign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketingOnly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarketingOnly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Merged)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Merged)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msdyn_externalaccountid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdyn_externalaccountid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msdyn_TaxExempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdyn_TaxExempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msdyn_TaxExemptNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdyn_TaxExemptNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.msdyn_WorkOrderInstructions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msdyn_WorkOrderInstructions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfEmployees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfEmployees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnHoldTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnHoldTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenDeals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenDeals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenDeals_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenDeals_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenDeals_State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenDeals_State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenRevenue_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenRevenue_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenRevenue_State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenRevenue_State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OverriddenCreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OverriddenCreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParticipatesInWorkflow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParticipatesInWorkflow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimarySatoriId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimarySatoriId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryTwitterId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryTwitterId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcessId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProcessId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SharesOutstanding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SharesOutstanding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StageId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StageId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockExchange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockExchange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TickerSymbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TickerSymbol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeSpentByMeOnEmailAndMeetings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeSpentByMeOnEmailAndMeetings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeZoneRuleVersionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeZoneRuleVersionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TraversedPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TraversedPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UTCConversionTimeZoneCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UTCConversionTimeZoneCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VersionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VersionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebSiteURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebSiteURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YomiName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YomiName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
