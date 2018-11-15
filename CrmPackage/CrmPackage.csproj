@@ -37,6 +37,8 @@
   <ItemGroup>
     <Folder Include="WebResources\Script %28JScript%29\" />
     <Folder Include="WebResources\Script %28JScript%29\Intellisense" />
+    <Folder Include="WebResources\Style Sheet %28CSS%29\" />
+    <Folder Include="WebResources\Web Page %28HTML%29\" />
     <RegisterPlugin Include="RegisterFile.crmregister">
       <DisplayName>RegisterFile</DisplayName>
       <UniqueName>cr766_RegisterFile</UniqueName>
@@ -65,6 +67,17 @@
       <WebResourceType>Script</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
+    <CRMWebResource Include="WebResources\Script %28JScript%29\cr766_Lab6DStart.js">
+      <DisplayName>Lab6DStart.js</DisplayName>
+      <UniqueName>cr766_Lab6DStart.js</UniqueName>
+      <WebResourceType>Script</WebResourceType>
+      <WebResourceLanguage>English (United States)</WebResourceLanguage>
+    </CRMWebResource>
+    <CRMWebResource Include="WebResources\Script %28JScript%29\cr766_module7.js">
+      <DisplayName>Module7.js</DisplayName>
+      <UniqueName>cr766_module7.js</UniqueName>
+      <WebResourceType>Script</WebResourceType>
+    </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\Lab6AStart.js">
       <DisplayName>Lab6AStart.js</DisplayName>
       <UniqueName>cr766_Lab6AStart</UniqueName>
@@ -75,15 +88,33 @@
       <UniqueName>cr766_Lab6BStart.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
-    <CRMWebResource Include="WebResources\Script %28JScript%29\Lab6CStart.js">
-      <DisplayName>Lab6CStart</DisplayName>
-      <UniqueName>cr766_Lab6CStart</UniqueName>
+    <CRMWebResource Include="WebResources\Script %28JScript%29\showdataparams.js">
+      <DisplayName>qa/scripts/showdataparams.js</DisplayName>
+      <UniqueName>cr766_/scripts/showdataparams.js</UniqueName>
+      <WebResourceType>Script</WebResourceType>
+      <WebResourceLanguage>English (United States)</WebResourceLanguage>
+    </CRMWebResource>
+    <CRMWebResource Include="WebResources\Script (JScript)\Lab6CStart.js">
+      <DisplayName>Lab6CStart.js</DisplayName>
+      <UniqueName>cr766_Lab6CStart.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\new_Greet2.js">
       <DisplayName>Greet2.js</DisplayName>
       <UniqueName>new_Greet2</UniqueName>
       <WebResourceType>Script</WebResourceType>
+      <WebResourceLanguage>English (United States)</WebResourceLanguage>
+    </CRMWebResource>
+    <CRMWebResource Include="WebResources\Style Sheet %28CSS%29\cr766_styles.css">
+      <DisplayName>qastyles.css</DisplayName>
+      <UniqueName>cr766_styles.css</UniqueName>
+      <WebResourceType>CascadingStylesheet</WebResourceType>
+      <WebResourceLanguage>English (United States)</WebResourceLanguage>
+    </CRMWebResource>
+    <CRMWebResource Include="WebResources\Web Page %28HTML%29\HtmlWR_linkScript_linkCss.html.htm">
+      <DisplayName>qa/html/HtmlWR_linkScript_linkCss.html</DisplayName>
+      <UniqueName>cr766_/html/HtmlWR_linkScript_linkCss.html</UniqueName>
+      <WebResourceType>WebPage</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
     <None Include="WebResources\Script %28JScript%29\Intellisense\MSXRMTOOLS.Xrm.Page.2016.js">

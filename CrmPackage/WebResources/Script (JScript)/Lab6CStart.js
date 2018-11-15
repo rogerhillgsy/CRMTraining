@@ -5,9 +5,22 @@ var QALabc = {};
 QALabc.OnFormLoad = function () {
     QALabc.addOnChange("new_sortcode", QALabc.ValidateForm);
     QALabc.addOnChange("new_banklocation", QALabc.ValidateForm);
-    //QALab.addOnChange("new_balance", QALab.CheckFundsForAccountType);
-    //QALab.addOnChange("new_accounttype", QALab.CheckFundsForAccountType);
+    QALabc.addOnChange("new_balance", QALabc.CheckFundsForAccountType);
+    QALabc.addOnChange("new_accounttype", QALabc.CheckFundsForAccountType);
+    Xrm.Page.data.entity.addOnSave(QALabc.OnFormSave);
 };
+
+QALabc.OnFormSave = function(e) {
+    var eventargs = e.getEventArgs();
+    if (  eventargs.getSaveMode() == 70 // autosave
+        || eventargs.getSaveMode() == 1 // save
+        || eventargs.getSaveMode() == 2  // Save and close
+            ) { 
+        if ( QALabc.ValidateForm()) {
+            eventargs.preventDefault();
+        }
+    }
+}
 
 QALabc.addOnChange = function (attribute, callback) {
     var attr = Xrm.Page.getAttribute(attribute);
@@ -23,10 +36,14 @@ QALabc.ValidateForm = function() {
     var result = false;
 
     if (!QALabc.ValidSortCode(location, sortcode)) {
-        sortcodecontrol.setNotification("The account code does not match the location: " + location);
+        // sortcodecontrol.setNotification("The account code does not match the location: " + location);
+        Xrm.Page.ui.setFormNotification("Sortcode: " + sortcode + " is not correct", "ERROR", "InvalidSortCode");
+        result = true;
     } else {
-        sortcodecontrol.clearNotification();
+        // sortcodecontrol.clearNotification();
+        Xrm.Page.ui.clearFormNotification("InvalidSortCode");
     }
+    return result;
 }
 
 QALabc.ValidSortCode = function (location, sortcode) {
@@ -45,5 +62,19 @@ QALabc.ValidSortCode = function (location, sortcode) {
             break;
     }
     return (new RegExp(pattern)).test(sortcode);
+}
+
+QALabc.CheckFundsForAccountType = function () {
+    var accountType = Xrm.Page.getAttribute("new_accounttype");
+    accountType = !!accountType ? accountType.getSelectedOption().value : null;
+    var balanceControl = Xrm.Page.getControl("new_balance");
+    var balance = Xrm.Page.getAttribute("new_balance");
+    balance = !!balance ? balance.getValue() : null;
+
+    if (accountType == 100000000 && balance < 50) {
+        balanceControl.setNotification("Savings account number have more than 50");
+    } else {
+        balanceControl.clearNotification();
+    }
 }
 

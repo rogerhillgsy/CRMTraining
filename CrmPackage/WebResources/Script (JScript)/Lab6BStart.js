@@ -56,5 +56,4 @@ QALab.CheckFundsForAccountType = function() {
     } else {
         balanceControl.clearNotification();
     }
-
 }
