@@ -32,6 +32,11 @@ mod7 = function() {
         var rv = Xrm.Page.getControl(control);
         return rv;
     }
+    var getControlValue = function (control) {
+        var rv = getControl(control);
+        if (!!rv) rv = rv.getValue();
+        return rv;
+    }
 
     var clearDescription = function() {
         var desc = Xrm.Page.getAttribute("new_description");
@@ -105,45 +110,43 @@ mod7 = function() {
                 function() {
                     clearDescription();
                     appendDescription("Postcode " + postcode + " was ok");
-                    var postcode = getControl(POSTCODE);
-                    postcode.clearNotification();
+                    var postcodeCon = getControl(POSTCODE);
+                    postcodeCon.clearNotification();
                 },
                 postCodeHasError());
         }
     }
 
-    var checkPostcodeOnKey = function(ext) {
-        //var postcodecon = getControl(POSTCODE);
-        //var resultSet = {
-        //    results: new Array(),
-        //    commands: {
-        //        id: "postcode_commands",
-        //        label: "learn More",
-        //        action: function() {
-        //            console.log("Learn more");
-        //        }
-        //    }
-        //}
-        //resultSet.results.push({ id: 1, fields: ["TW1", "a"] });
-        //resultSet.results.push({ id: 2, fields: ["TW2", "a"] });
+    var noAutoComplete = function(ext) {
+        ext.getEventSource().hideAutoComplete();
+        postCodeHasError();
+    }
 
-        //ext.getEventSource().showAutoComplete(resultSet);
-        // ext.getEventSource().hideAutoComplete(resultSet);
-        var postcode = getAttribute(POSTCODE);
+    var checkPostcodeOnKey = function(ext) {
+        var postcode = getControlValue(POSTCODE);
+        var attrValue = getAttribute(POSTCODE);
+        console.log("Postcode control is " + postcode + " postcode attribute is " + attrValue);
         if (!!postcode && postcode.length > 2) {
             checkPostcodeAsync(postcode,
-                function(result) {
-                    var resultSet = { results: new Array() };
-                
-                    for (var i = 0; i < result.result.length; i++) {
-                        resultSet.results.push({ id: i, fields: [result.result[i]] });
-                    }
-                    // resultSet = { results: result.result };
+                function(result) { // success
+                    var control = ext.getEventSource();
+                    var resultLen = result.result.length < 10 ? result.result.length : 10;
+                    if (resultLen == 0) { // No matches for autocomplete
+                        noAutoComplete(ext);
+                    } else if (resultLen == 1) { // We have one unique value
+                        control.clearNotification();
+                        ext.getEventSource().hideAutoComplete();
+                    } else if (result.result.length > 1) {
+                        var resultSet = { results: new Array() };
 
-                    ext.getEventSource().clearNotification();
-                    ext.getEventSource().showAutoComplete(resultSet);
+                        for (var i = 0; i < resultLen; i++) {
+                            resultSet.results.push({ id: i, fields: [result.result[i]] });
+                        }
+                        control.clearNotification();
+                        control.showAutoComplete(resultSet);
+                    }
                 },
-                function() {
+                function() { // error
                     ext.getEventSource().hideAutoComplete();
                     postCodeHasError();
                 }
@@ -153,4 +156,3 @@ mod7 = function() {
 
     return { OnLoad: onLoad };
 }();
-
