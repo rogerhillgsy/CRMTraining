@@ -22,6 +22,18 @@ QALabd = function() {
         }
     }
 
+
+
     return { OnLoad : onLoad }
 }();
 
+
+function TrainingButton() {
+    alert("You pressed a button");
+}
+
+function CreateDuplicate() {
+    alert("Trying to create duplicate");
+
+
+}

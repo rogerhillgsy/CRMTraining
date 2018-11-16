@@ -1,26 +1,26 @@
 ///<reference path="Intellisense/MSXRMTOOLS.Xrm.Page.2016.js"/>
 
-mod7 = function() {
+mod7 = function () {
 
     var POSTCODE = "new_postcode";
 
-    var onLoad = function() {
+    var onLoad = function () {
         addOnChange("cr766_name", getMatchingNames);
         addOnKeyPress(POSTCODE, checkPostcodeOnKey);
     }
 
-    var addOnChange = function(attribute, callback) {
+    var addOnChange = function (attribute, callback) {
         var attr = Xrm.Page.getAttribute(attribute);
         if (attr != null) attr.addOnChange(callback);
     }
 
-    var addOnKeyPress = function(control, callback) {
+    var addOnKeyPress = function (control, callback) {
         var con = Xrm.Page.getControl(control);
         if (con != null) con.addOnKeyPress(callback);
     }
 
 
-    var getAttribute = function(attribute) {
+    var getAttribute = function (attribute) {
         var rv = Xrm.Page.getAttribute(attribute);
         if (!!rv) {
             rv = rv.getValue();
@@ -28,7 +28,7 @@ mod7 = function() {
         return rv;
     }
 
-    var getControl = function(control) {
+    var getControl = function (control) {
         var rv = Xrm.Page.getControl(control);
         return rv;
     }
@@ -38,13 +38,13 @@ mod7 = function() {
         return rv;
     }
 
-    var clearDescription = function() {
+    var clearDescription = function () {
         var desc = Xrm.Page.getAttribute("new_description");
         if (!!desc) {
             desc.setValue("");
         }
     }
-    var appendDescription = function(s) {
+    var appendDescription = function (s) {
         var desc = Xrm.Page.getAttribute("new_description");
         if (!!desc) {
             var current = desc.getValue();
@@ -53,7 +53,7 @@ mod7 = function() {
         }
     }
 
-    var getMatchingNames = function() {
+    var getMatchingNames = function () {
         var name = getAttribute("cr766_name");
         clearDescription();
         Xrm.WebApi.online.retrieveMultipleRecords("cr766_module7test",
@@ -64,13 +64,13 @@ mod7 = function() {
                     appendDescription(cr766_name);
                 }
             },
-            function(error) {
+            function (error) {
                 Xrm.Utility.alertDialog(error.message);
             }
-        );
+            );
     }
 
-    var postCodeHasError = function() {
+    var postCodeHasError = function () {
         var postcode = getControl(POSTCODE);
         postcode.setNotification("This does not look like a postcode");
     }
@@ -102,12 +102,12 @@ mod7 = function() {
         }
     };
 
-    var checkPostcode = function() {
+    var checkPostcode = function () {
         var postcode = getAttribute(POSTCODE);
 
         if (!!postcode) {
             checkPostcodeAsync(postcode,
-                function() {
+                function () {
                     clearDescription();
                     appendDescription("Postcode " + postcode + " was ok");
                     var postcodeCon = getControl(POSTCODE);
@@ -117,18 +117,18 @@ mod7 = function() {
         }
     }
 
-    var noAutoComplete = function(ext) {
+    var noAutoComplete = function (ext) {
         ext.getEventSource().hideAutoComplete();
         postCodeHasError();
     }
 
-    var checkPostcodeOnKey = function(ext) {
+    var checkPostcodeOnKey = function (ext) {
         var postcode = getControlValue(POSTCODE);
         var attrValue = getAttribute(POSTCODE);
         console.log("Postcode control is " + postcode + " postcode attribute is " + attrValue);
         if (!!postcode && postcode.length > 2) {
             checkPostcodeAsync(postcode,
-                function(result) { // success
+                function (result) { // success
                     var control = ext.getEventSource();
                     var resultLen = result.result.length < 10 ? result.result.length : 10;
                     if (resultLen == 0) { // No matches for autocomplete
@@ -146,7 +146,7 @@ mod7 = function() {
                         control.showAutoComplete(resultSet);
                     }
                 },
-                function() { // error
+                function () { // error
                     ext.getEventSource().hideAutoComplete();
                     postCodeHasError();
                 }
@@ -154,5 +154,36 @@ mod7 = function() {
         }
     }
 
-    return { OnLoad: onLoad };
+    function createDuplicate(primaryControl, primaryControlId, commandParams ) {
+        debugger;
+        var options = {};
+        options["entityName"] = "cr766_module7test";
+
+        var pc= getAttribute(POSTCODE);
+        var name = getAttribute("cr766_name");
+
+        var button = getAttribute("new_showtrainingbutton");
+
+        var oldId = Xrm.Page.data.entity.getId();
+        var myId = primaryControl.data.entity.getId();
+
+        options["createFromEntity"] = { entityType: "cr766_module7test", id: oldId };
+
+        var params = {  "cr766_name": name };
+        params[POSTCODE] = pc;
+
+        Xrm.Navigation.openForm(options).then(
+            function success() {
+                alert("Creation was a success");
+            },
+            function error() {
+                alert("there was a problem");
+            }
+        );
+    }
+
+    return {
+        OnLoad: onLoad,
+        CreateDuplicate: createDuplicate
+    };
 }();
