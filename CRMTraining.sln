@@ -28,6 +28,37 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalDll", "ExternalDll\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowsTest", "WorkflowsTest\WorkflowsTest.csproj", "{8EBD8833-A433-4AD3-9CAC-390513052508}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{CF499C2E-364D-4C89-8DFD-2F91FEBF635C}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Additional Labs.docx = Documents\Additional Labs.docx
+		Documents\Additional Topics.pptx = Documents\Additional Topics.pptx
+		Documents\MicrsooftCrmDeveloperTools17.vsix = Documents\MicrsooftCrmDeveloperTools17.vsix
+		Documents\Module 9 - with extras.pptx = Documents\Module 9 - with extras.pptx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{A66BEB06-BE51-4753-BBE8-631AA0E5D29A}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Labs\Module 1 Lab A.docx = Documents\Labs\Module 1 Lab A.docx
+		Documents\Labs\Module 2 Lab A.docx = Documents\Labs\Module 2 Lab A.docx
+		Documents\Labs\Module 2 Lab B.docx = Documents\Labs\Module 2 Lab B.docx
+		Documents\Labs\Module 2 Lab C.docx = Documents\Labs\Module 2 Lab C.docx
+		Documents\Labs\Module 2 Lab D.docx = Documents\Labs\Module 2 Lab D.docx
+		Documents\Labs\Module 2 Lab E.docx = Documents\Labs\Module 2 Lab E.docx
+		Documents\Labs\Module 3 LAB A.docx = Documents\Labs\Module 3 LAB A.docx
+		Documents\Labs\Module 4 Lab A.docx = Documents\Labs\Module 4 Lab A.docx
+		Documents\Labs\Module 5 Lab A.docx = Documents\Labs\Module 5 Lab A.docx
+		Documents\Labs\Module 5 Lab B.docx = Documents\Labs\Module 5 Lab B.docx
+		Documents\Labs\Module 6 LAB A.docx = Documents\Labs\Module 6 LAB A.docx
+		Documents\Labs\Module 6 Lab B.docx = Documents\Labs\Module 6 Lab B.docx
+		Documents\Labs\Module 6 Lab C.docx = Documents\Labs\Module 6 Lab C.docx
+		Documents\Labs\Module 6 LAB D.docx = Documents\Labs\Module 6 LAB D.docx
+		Documents\Labs\Module 7 LAB A.docx = Documents\Labs\Module 7 LAB A.docx
+		Documents\Labs\Module 7 LAB B.docx = Documents\Labs\Module 7 LAB B.docx
+		Documents\Labs\Module 7 Lab C.docx = Documents\Labs\Module 7 Lab C.docx
+		Documents\Labs\Module 8 LAB A.docx = Documents\Labs\Module 8 LAB A.docx
+		Documents\Labs\Module 8 LAB B.docx = Documents\Labs\Module 8 LAB B.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +110,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A66BEB06-BE51-4753-BBE8-631AA0E5D29A} = {CF499C2E-364D-4C89-8DFD-2F91FEBF635C}
 	EndGlobalSection
 	GlobalSection(CRMSolutionProperties) = preSolution
 		SolutionIsBoundToCRM = True

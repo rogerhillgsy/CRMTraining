@@ -1,11 +1,13 @@
 ///<reference path="Intellisense/MSXRMTOOLS.Xrm.Page.2016.js"/>
 
+
 mod7 = function () {
 
     var POSTCODE = "new_postcode";
 
     var onLoad = function () {
         addOnChange("cr766_name", getMatchingNames);
+        // addOnChange(POSTCODE, checkPostcode);
         addOnKeyPress(POSTCODE, checkPostcodeOnKey);
     }
 
