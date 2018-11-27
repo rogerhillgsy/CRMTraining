@@ -51,17 +51,13 @@
   </PropertyGroup>
   <ItemGroup>
     <!--<None Include="MetadataProjectBinPlace.targets" />-->
+    <None Include="packages.config" />
     <ResourceDefinition Include="WebResources.xml" />
     <None Include="Microsoft.Crm.SolutionProjects.Metadata.targets" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.Crm.SolutionProjects.MSBuild">
-      <HintPath>$(SolutionDir)packages\Microsoft.Crm.SolutionMSBuildExtention.1.3.2\lib\net452\Microsoft.Crm.SolutionProjects.MSBuild.dll</HintPath>
+    <Reference Include="Microsoft.Crm.SolutionProjects.MSBuild, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Crm.SolutionMSBuildExtention.1.3.2\lib\net452\Microsoft.Crm.SolutionProjects.MSBuild.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

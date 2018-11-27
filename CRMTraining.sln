@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.52
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{88A30576-7583-4F75-8136-5EFD2C14ADFF}") = "CrmPackage", "CrmPackage\CrmPackage.csproj", "{D1AB521F-425B-465D-AC02-EDF4763D1BD9}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -30,8 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowsTest", "WorkflowsT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{CF499C2E-364D-4C89-8DFD-2F91FEBF635C}"
 	ProjectSection(SolutionItems) = preProject
-		Documents\Additional Labs.docx = Documents\Additional Labs.docx
 		Documents\Additional Topics.pptx = Documents\Additional Topics.pptx
+		Documents\Course Notes.docx = Documents\Course Notes.docx
 		Documents\MicrsooftCrmDeveloperTools17.vsix = Documents\MicrsooftCrmDeveloperTools17.vsix
 		Documents\Module 9 - with extras.pptx = Documents\Module 9 - with extras.pptx
 	EndProjectSection
@@ -100,9 +100,7 @@ Global
 		{F4EDD015-CBF9-4FA6-85B5-23E3FF12FFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4EDD015-CBF9-4FA6-85B5-23E3FF12FFF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1985E0FB-54DA-45E9-A0F3-BF22FD543A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1985E0FB-54DA-45E9-A0F3-BF22FD543A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1985E0FB-54DA-45E9-A0F3-BF22FD543A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1985E0FB-54DA-45E9-A0F3-BF22FD543A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8EBD8833-A433-4AD3-9CAC-390513052508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8EBD8833-A433-4AD3-9CAC-390513052508}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EBD8833-A433-4AD3-9CAC-390513052508}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -113,6 +111,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A66BEB06-BE51-4753-BBE8-631AA0E5D29A} = {CF499C2E-364D-4C89-8DFD-2F91FEBF635C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D808C305-F39B-4A5F-8FF5-C84842D03409}
 	EndGlobalSection
 	GlobalSection(CRMSolutionProperties) = preSolution
 		SolutionIsBoundToCRM = True
