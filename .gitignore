@@ -214,6 +214,9 @@ UpgradeLog*.htm
 *.mdf
 *.ldf
 
+# SDK files from NuGet
+SDK/
+
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
