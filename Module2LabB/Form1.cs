@@ -32,12 +32,12 @@ namespace Module2LabA
         private void button1_Click(object sender, EventArgs e)
         {
             userCred = new ClientCredentials();
-            userCred.UserName.UserName = "roger@rbh2.onmicrosoft.com";
-            userCred.UserName.Password = "Password1";
+            userCred.UserName.UserName = "roger@rbh3.onmicrosoft.com";
+            userCred.UserName.Password = "Password123";
 
             deviceCred = new ClientCredentials();
-            deviceCred.UserName.UserName = "11CRMTrainingPC";
-            deviceCred.UserName.Password = "Password1";
+            deviceCred.UserName.UserName = "11d7g47hamaeg3d7fmcplqog00";
+            deviceCred.UserName.Password = "rp3--#7tqfF-I%~;X@x(j%Fs";
 
             var discoUrl = "https://disco.crm11.dynamics.com/XRMServices/2011/Discovery.svc";
 
