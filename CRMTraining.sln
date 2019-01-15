@@ -61,6 +61,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{A66BEB06-B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleXLabTests", "ModuleXLabTests\ModuleXLabTests.csproj", "{64AA5985-00C4-4C62-A340-9954E7EDA95E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3LabA", "Module3LabA\Module3LabA.csproj", "{69235913-EFE6-4E56-9248-9343FB203058}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{64AA5985-00C4-4C62-A340-9954E7EDA95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64AA5985-00C4-4C62-A340-9954E7EDA95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64AA5985-00C4-4C62-A340-9954E7EDA95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69235913-EFE6-4E56-9248-9343FB203058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69235913-EFE6-4E56-9248-9343FB203058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69235913-EFE6-4E56-9248-9343FB203058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69235913-EFE6-4E56-9248-9343FB203058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,12 +126,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D808C305-F39B-4A5F-8FF5-C84842D03409}
-	EndGlobalSection
-	GlobalSection(CRMSolutionProperties) = preSolution
-		SolutionIsBoundToCRM = True
-	EndGlobalSection
-	GlobalSection(CRMSolutionProperties) = preSolution
-		SolutionIsBoundToCRM = True
 	EndGlobalSection
 	GlobalSection(CRMSolutionProperties) = preSolution
 		SolutionIsBoundToCRM = True

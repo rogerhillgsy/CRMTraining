@@ -22,6 +22,14 @@ namespace CRMTrainingTests
                 var ctx = new OrgServiceContext(crmSvc);
 
                 var acc = (from a in ctx.AccountSet where a.Name == "Aardvark Ltd" select a).ToList();
+                var acc2 = ctx.AccountSet.Where(n => n.Name == "Aardvark Ltd)").Select(a => a).ToList();
+
+                //var contacts = from c in ctx.ContactSet orderby c.FirstName select c;
+                //var contacts2 = from c in ctx.ContactSet orderby c.FirstName select new { MyName = c.FirstName, TheId = c.Id };
+
+                //var theResults = contacts2.ToList();
+
+                //var contacts3 = from c in ctx.ContactSet orderby c.FirstName select new Contact {Id = c.Id, FirstName = c.FirstName, LastName = c.LastName };
 
                 var account = new Account();
                 account.Id = acc.First().Id;
