@@ -107,7 +107,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities.cs" />
     <Compile Include="IoResponse.cs" />
     <Compile Include="Module2LabA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +138,12 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExternalDll\ExternalDll.csproj">
+      <Project>{1985e0fb-54da-45e9-a0f3-bf22fd543a9b}</Project>
+      <Name>ExternalDll</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

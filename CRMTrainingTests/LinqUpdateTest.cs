@@ -21,7 +21,15 @@ namespace CRMTrainingTests
             {
                 var ctx = new OrgServiceContext(crmSvc);
 
-                var acc = (from a in ctx.AccountSet where a.Name == "Aardvark Ltd" select a).ToList();
+                var acc = (from a in ctx.AccountSet where a.Name == "Alpine Ski House" select a).ToList();
+
+                var acc2 = (from a in ctx.AccountSet
+                    where a.Name.StartsWith("Alpine")
+                    select new  {Name = a.Name, Address1_City = a.Address1_City}).ToList();
+
+                var acc3 = (from a in ctx.AccountSet
+                    where a.Name.StartsWith("Alpine")
+                    select new Account  {Name = a.Name, Address1_City = a.Address1_City}).ToList();
 
                 var account = new Account();
                 account.Id = acc.First().Id;
