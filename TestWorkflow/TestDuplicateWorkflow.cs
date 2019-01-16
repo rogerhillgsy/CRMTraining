@@ -8,7 +8,6 @@ using System.DirectoryServices;
 using System.Net;
 using CRMTraining2.Workflows;
 using FakeXrmEasy;
-using CRMTraining2.Workflows;
 using Microsoft.Xrm.Sdk;
 
 namespace TestWorkflow
@@ -21,14 +20,14 @@ namespace TestWorkflow
         [TestMethod]
         public void TestCodeActivity()
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             using (var ctx = new CrmServiceClient(cnString))
             {
                 var codeActivity = new DuplicateChecker();
                 var result = codeActivity.NumberOfDuplicates(ctx.OrganizationServiceProxy, "Name1");
 
-                Assert.IsTrue(result > 0);
+                Assert.IsTrue( result > 0);
 
             }
         }
@@ -63,7 +62,7 @@ namespace TestWorkflow
             var codeActivity = new DuplicateChecker();
             var result = codeActivity.NumberOfDuplicates(ctx.GetOrganizationService(), "Name1");
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual( 0, result);
 
             result = codeActivity.NumberOfDuplicates(ctx.GetOrganizationService(), "Account One");
             Assert.AreEqual(1, result);
@@ -92,16 +91,16 @@ namespace TestWorkflow
             var wfContext = ctx.GetDefaultWorkflowContext();
             wfContext.MessageName = "Create";
             wfContext.PrimaryEntityId = account1.Id;
-            wfContext.PreEntityImages.Add("account", account1);
+            wfContext.PreEntityImages.Add("account",account1);
 
             var input = new Dictionary<string, object>();
-            //            input.Add("AccountReference", new EntityReference("account", account1.Id));
+//            input.Add("AccountReference", new EntityReference("account", account1.Id));
 
 
             var codeActivity = new DuplicateChecker();
             var result = ctx.ExecuteCodeActivity<DuplicateChecker>(wfContext, input, codeActivity);
 
-            Assert.IsTrue(result.ContainsKey("PossibleMatch"));
+            Assert.IsTrue( result.ContainsKey("PossibleMatch"));
             Assert.IsTrue((bool)result["PossibleMatch"]);
 
             //            Debugger.Break();         
