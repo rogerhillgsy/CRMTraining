@@ -85,7 +85,7 @@
   <ItemGroup>
     <Compile Include="AccountDuplicateChecker.cs" />
     <Compile Include="AccountDuplicateChecker2.cs" />
-    <Compile Include="TestActivity.cs" />
+    <Compile Include="CustomWorkflow1.cs" />
     <Compile Include="WorkflowActivityBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

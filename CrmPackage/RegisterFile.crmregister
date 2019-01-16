@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
   <Solutions>
-    <Solution Assembly="CRMTraining2.Workflows.dll" Id="00000000-0000-0000-0000-000000000000" IsolationMode="Sandbox" SourceType="Database">
+    <Solution Assembly="CRMTraining2.Workflows.dll" Id="727e34a4-3c6d-4b02-9bc5-0131839f08b6" IsolationMode="Sandbox" SourceType="Database">
       <WorkflowTypes>
         <clear />
         <WorkflowType FriendlyName="Account Duplicate Checker" Name="AccountDuplicateChecker" Description="Check for duplicates on accounts" WorkflowActivityGroupName="CRMTraining" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.AccountDuplicateChecker" />
         <WorkflowType FriendlyName="Account Duplicate Checker" Name="AccountDuplicateChecker" Description="Check for duplicates on accounts" WorkflowActivityGroupName="CRMTraining" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.AccountDuplicateChecker2" />
-        <WorkflowType FriendlyName="Test Activity" Name="TestActivity" Description="A test activity" WorkflowActivityGroupName="Test" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.TestActivity" />
+        <WorkflowType FriendlyName="DuplicateChecker" Name="DuplicateChecker" Description="Check for duplicates" WorkflowActivityGroupName="Group2" WorkflowActivityProjectName="Workflows" Id="262ebfbe-08cf-498a-a599-4bd02aaac796" TypeName="CRMTraining2.Workflows.DuplicateChecker" />
       </WorkflowTypes>
     </Solution>
     <Solution Assembly="CRMTraining2.Plugins.dll" Id="52aba4c9-c47d-4b49-931b-334d5f8b6f6c" IsolationMode="Sandbox" SourceType="Database">

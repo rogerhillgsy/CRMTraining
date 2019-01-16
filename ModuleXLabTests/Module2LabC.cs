@@ -17,7 +17,7 @@ namespace ModuleXLabTests
             var  cnString = ConfigurationManager.ConnectionStrings["CrmOnline"].ConnectionString;
             var crmServiceClient = new CrmServiceClient(cnString);
 
-            var account = new Entity("account");
+            var account = new Entity("account");    
             account["name"] = name;
             account["address1_line1"] = line1;
             account["address1_city"] = city;
