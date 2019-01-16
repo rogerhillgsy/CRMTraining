@@ -73,8 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressFromPostCodePlugin.cs" />
+    <Compile Include="PostOperationcontactCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PluginBase.cs" />
+    <Compile Include="ValidatePostcode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CRMTraining.snk" />

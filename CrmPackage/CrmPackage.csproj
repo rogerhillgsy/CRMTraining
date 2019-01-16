@@ -39,11 +39,11 @@
     <Folder Include="WebResources\Script %28JScript%29\Intellisense" />
     <Folder Include="WebResources\Style Sheet %28CSS%29\" />
     <Folder Include="WebResources\Web Page %28HTML%29\" />
-    <RegisterPlugin Include="RegisterFile.crmregister">
+    <Content Include="RegisterFile.crmregister">
       <DisplayName>RegisterFile</DisplayName>
       <UniqueName>cr766_RegisterFile</UniqueName>
       <WebResourceType>NotSupported</WebResourceType>
-    </RegisterPlugin>
+    </Content>
     <Folder Include="WebResources" />
   </ItemGroup>
   <ItemGroup>

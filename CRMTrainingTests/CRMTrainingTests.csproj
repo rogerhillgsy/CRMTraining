@@ -123,6 +123,7 @@
     <Compile Include="LinqUpdateTest.cs" />
     <Compile Include="PostcodeLookupTest.cs" />
     <Compile Include="FakeXrmEasyTest.cs" />
+    <Compile Include="Module5PostcodeLookupTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -154,6 +155,10 @@
     <ProjectReference Include="..\ExternalDll\ExternalDll.csproj">
       <Project>{1985e0fb-54da-45e9-a0f3-bf22fd543a9b}</Project>
       <Name>ExternalDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\Plugins.csproj">
+      <Project>{6CAEFD90-2CF5-47DC-A35A-17FED2071D35}</Project>
+      <Name>Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

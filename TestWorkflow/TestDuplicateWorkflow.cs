@@ -12,6 +12,9 @@ using Microsoft.Xrm.Sdk;
 
 namespace TestWorkflow
 {
+    /// <summary>
+    ///  Test workflow activity with an actual CRM instance
+    /// </summary>
     [TestClass]
     public class TestDuplicateWorkflow
     {
@@ -32,6 +35,9 @@ namespace TestWorkflow
             }
         }
 
+        /// <summary>
+        /// Test workflow with faked CRM service context
+        /// </summary>
         [TestMethod]
         public void TestAccountDuplicatesWithFakes1()
         {
@@ -68,6 +74,9 @@ namespace TestWorkflow
             Assert.AreEqual(1, result);
         }
 
+        /// <summary>
+        /// Test workflow activity with a Faked Workflow execution context.
+        /// </summary>
         [TestMethod]
         public void TestAccountDuplicatesWithFakes2()
         {
