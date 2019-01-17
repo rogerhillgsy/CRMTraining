@@ -1,12 +1,24 @@
 ﻿///<reference path="Intellisense/MSXRMTOOLS.Xrm.Page.2016.js"/>
 
-qa = qa || {};
+qa = typeof(qa) == 'undefined' ? {} :qa;
 qa.training = qa.training ||  {};
 
 
 qa.training.ShowBankLocation = function() {
 
     var location = Xrm.Page.getAttribute("new_banklocation").getValue();
+    if (location != null) {
+        alert("Location is " + location);
+        console.log("Location is " + location);
+    } else {
+        alert("Location was not defined");
+    }
+}
+
+// V9 equivalent using new form context
+qa.training.ShowBankLocation = function ( context ) {
+    var xrmpage = context.getFormContext();
+    var location = xrmpage.getAttribute("new_banklocation").getValue();
     if (location != null) {
         alert("Location is " + location);
         console.log("Location is " + location);

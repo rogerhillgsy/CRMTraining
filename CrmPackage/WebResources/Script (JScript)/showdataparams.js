@@ -63,6 +63,18 @@ function getDataParam() {
                 oTBody.appendChild(oTRow);
             }
 
+            parent.Xrm.WebApi.online.retrieveRecord("rbh_module7test", "2B639D85-771A-E911-A977-0022480149C2", "?$select=createdon").then(
+                function success(result) {
+                    var createdon = result["createdon"];
+                    var d = document.createElement("div");
+                    d.innerText = createdon.toString();
+                    document.body.appendChild(d);
+                },
+                function (error) {
+                    Xrm.Utility.alertDialog(error.message);
+                }
+            );
+
             oTable.appendChild(oTBody);
             document.body.appendChild(oTable);
 
