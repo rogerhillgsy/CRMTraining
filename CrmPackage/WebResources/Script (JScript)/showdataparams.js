@@ -1,3 +1,6 @@
+function HelloWorld() {
+    alert("Hello World");
+}
 function getDataParam() {
 
     //Get the any query string parameters and load them into the vals array 
@@ -8,15 +11,7 @@ function getDataParam() {
 
         vals = location.search;
         parseDataValue(vals);
-
-
-
-
-
-
-
-
-    }
+   }
 
     function parseDataValue(datavalue) {
 
@@ -62,6 +57,18 @@ function getDataParam() {
                 oTRow.appendChild(oTRowTD2);
                 oTBody.appendChild(oTRow);
             }
+
+            parent.Xrm.WebApi.online.retrieveRecord("rbh_module7test", "2B639D85-771A-E911-A977-0022480149C2", "?$select=createdon").then(
+                function success(result) {
+                    var createdon = result["createdon"];
+                    var d = document.createElement("div");
+                    d.innerText = createdon.toString();
+                    document.body.appendChild(d);
+                },
+                function (error) {
+                    Xrm.Utility.alertDialog(error.message);
+                }
+            );
 
             oTable.appendChild(oTBody);
             document.body.appendChild(oTable);

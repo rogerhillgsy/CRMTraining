@@ -1,4 +1,6 @@
-﻿///<reference path="Intellisense/MSXRMTOOLS.Xrm.Page.2016.js"/>
+﻿ ///<reference path="Intellisense/MSXRMTOOLS.Xrm.Page.2016.js"/>
+
+Xrm.Utility.
 
 var QALabc = {};
 

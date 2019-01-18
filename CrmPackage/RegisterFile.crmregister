@@ -4,29 +4,16 @@
     <Solution Assembly="CRMTraining2.Workflows.dll" Id="727e34a4-3c6d-4b02-9bc5-0131839f08b6" IsolationMode="Sandbox" SourceType="Database">
       <WorkflowTypes>
         <clear />
-        <WorkflowType FriendlyName="Account Duplicate Checker" Name="AccountDuplicateChecker" Description="Check for duplicates on accounts" WorkflowActivityGroupName="CRMTraining" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.AccountDuplicateChecker" />
-        <WorkflowType FriendlyName="Account Duplicate Checker" Name="AccountDuplicateChecker" Description="Check for duplicates on accounts" WorkflowActivityGroupName="CRMTraining" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Workflows.AccountDuplicateChecker2" />
         <WorkflowType FriendlyName="DuplicateChecker" Name="DuplicateChecker" Description="Check for duplicates" WorkflowActivityGroupName="Group2" WorkflowActivityProjectName="Workflows" Id="262ebfbe-08cf-498a-a599-4bd02aaac796" TypeName="CRMTraining2.Workflows.DuplicateChecker" />
       </WorkflowTypes>
     </Solution>
-    <Solution Assembly="CRMTraining2.Plugins.dll" Id="52aba4c9-c47d-4b49-931b-334d5f8b6f6c" IsolationMode="Sandbox" SourceType="Database">
+    <Solution Assembly="CRMTraining2.Plugins.dll" Id="3d6649a9-66b1-47c1-82ef-2dbb45bb4ae0" IsolationMode="Sandbox" SourceType="Database">
       <PluginTypes>
         <clear />
-        <Plugin Description="Plug-in to Create of contact" FriendlyName="Create of contact" Name="CRMTraining2.Plugins.AddressFromPostCodePlugin" Id="ab0bacad-847d-497a-be59-710e18591c49" TypeName="CRMTraining2.Plugins.AddressFromPostCodePlugin">
+        <Plugin Description="Plug-in to Create of contact" FriendlyName="Create of contact" Name="CRMTraining2.Plugins.ValidatePostcode" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Plugins.ValidatePostcode">
           <Steps>
             <clear />
-            <Step AsyncAutoDelete="false" Name="Create of contact" Description="Create of contact" Id="c73378ff-5118-e911-a96d-002248019881" ImpersonatingUserId="00000000-0000-0000-0000-000000000000" MessageName="Create" Mode="Synchronous" PrimaryEntityName="contact" Rank="1" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly" MessageEntityId="00000000-0000-0000-0000-000000000000">
-              <Images />
-            </Step>
-            <Step AsyncAutoDelete="false" Name="Update of contact" Description="Update of contact" Id="b54d6508-5218-e911-a973-002248015a9d" ImpersonatingUserId="00000000-0000-0000-0000-000000000000" MessageName="Update" Mode="Synchronous" PrimaryEntityName="contact" Rank="1" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly" MessageEntityId="00000000-0000-0000-0000-000000000000">
-              <Images />
-            </Step>
-          </Steps>
-        </Plugin>
-        <Plugin Description="Plug-in to Create of account" FriendlyName="Create of account" Name="CRMTraining2.Plugins.PreValidateaccountCreate" Id="00000000-0000-0000-0000-000000000000" TypeName="CRMTraining2.Plugins.PreValidateaccountCreate">
-          <Steps>
-            <clear />
-            <Step AsyncAutoDelete="false" Name="Create of account" Description="Create of account" Id="00000000-0000-0000-0000-000000000000" ImpersonatingUserId="00000000-0000-0000-0000-000000000000" MessageName="Create" Mode="Synchronous" PrimaryEntityName="account" Rank="1" Stage="PreOutsideTransaction" SupportedDeployment="ServerOnly" MessageEntityId="00000000-0000-0000-0000-000000000000">
+            <Step AsyncAutoDelete="true" Name="Create of contact" Description="Create of contact" Id="00000000-0000-0000-0000-000000000000" ImpersonatingUserId="00000000-0000-0000-0000-000000000000" MessageName="Create" Mode="Asynchronous" PrimaryEntityName="contact" Rank="1" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly" MessageEntityId="00000000-0000-0000-0000-000000000000">
               <Images />
             </Step>
           </Steps>

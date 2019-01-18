@@ -67,9 +67,9 @@
       <WebResourceType>Script</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
-    <CRMWebResource Include="WebResources\Script %28JScript%29\cr766_Lab6DStart.js">
+    <CRMWebResource Include="WebResources\Script (JScript)\Lab6DStart.js">
       <DisplayName>Lab6DStart.js</DisplayName>
-      <UniqueName>cr766_Lab6DStart.js</UniqueName>
+      <UniqueName>rbh_Lab6DStart.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
@@ -78,25 +78,35 @@
       <UniqueName>cr766_module7.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
+    <CRMWebResource Include="WebResources\Script %28JScript%29\Demo.js">
+      <DisplayName>Demo</DisplayName>
+      <UniqueName>new_Demo</UniqueName>
+      <WebResourceType>Script</WebResourceType>
+    </CRMWebResource>
+    <CRMWebResource Include="WebResources\Script (JScript)\Module6FilterLookups.js">
+      <DisplayName>Module6FilterLookups.js</DisplayName>
+      <UniqueName>rbh_Module6FilterLookups.js</UniqueName>
+      <WebResourceType>Script</WebResourceType>
+    </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\Lab6AStart.js">
       <DisplayName>Lab6AStart.js</DisplayName>
-      <UniqueName>cr766_Lab6AStart</UniqueName>
+      <UniqueName>rbh_Lab6AStart</UniqueName>
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\Lab6BStart.js">
       <DisplayName>Lab6BStart.js</DisplayName>
-      <UniqueName>cr766_Lab6BStart.js</UniqueName>
+      <UniqueName>rbh_Lab6BStart.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\showdataparams.js">
-      <DisplayName>qa/scripts/showdataparams.js</DisplayName>
-      <UniqueName>cr766_/scripts/showdataparams.js</UniqueName>
+      <DisplayName>showdataparams.js</DisplayName>
+      <UniqueName>rbh_/scripts/showdataparams.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Script (JScript)\Lab6CStart.js">
       <DisplayName>Lab6CStart.js</DisplayName>
-      <UniqueName>cr766_Lab6CStart.js</UniqueName>
+      <UniqueName>rbh_Lab6CStart.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\new_Greet2.js">
@@ -105,15 +115,15 @@
       <WebResourceType>Script</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
-    <CRMWebResource Include="WebResources\Style Sheet %28CSS%29\cr766_styles.css">
+    <CRMWebResource Include="WebResources\Style Sheet (CSS)\styles.css">
       <DisplayName>qastyles.css</DisplayName>
-      <UniqueName>cr766_styles.css</UniqueName>
+      <UniqueName>rbh_/css/styles.css</UniqueName>
       <WebResourceType>CascadingStylesheet</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Web Page %28HTML%29\HtmlWR_linkScript_linkCss.html.htm">
       <DisplayName>qa/html/HtmlWR_linkScript_linkCss.html</DisplayName>
-      <UniqueName>cr766_/html/HtmlWR_linkScript_linkCss.html</UniqueName>
+      <UniqueName>rbh_/html/HtmlWR_linkScript_linkCss.html</UniqueName>
       <WebResourceType>WebPage</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>
     </CRMWebResource>

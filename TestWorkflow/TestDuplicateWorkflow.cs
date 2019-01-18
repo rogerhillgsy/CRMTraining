@@ -8,11 +8,13 @@ using System.DirectoryServices;
 using System.Net;
 using CRMTraining2.Workflows;
 using FakeXrmEasy;
-using CRMTraining2.Workflows;
 using Microsoft.Xrm.Sdk;
 
 namespace TestWorkflow
 {
+    /// <summary>
+    ///  Test workflow activity with an actual CRM instance
+    /// </summary>
     [TestClass]
     public class TestDuplicateWorkflow
     {
@@ -21,18 +23,21 @@ namespace TestWorkflow
         [TestMethod]
         public void TestCodeActivity()
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             using (var ctx = new CrmServiceClient(cnString))
             {
                 var codeActivity = new DuplicateChecker();
                 var result = codeActivity.NumberOfDuplicates(ctx.OrganizationServiceProxy, "Name1");
 
-                Assert.IsTrue(result > 0);
+                Assert.IsTrue( result > 0);
 
             }
         }
 
+        /// <summary>
+        /// Test workflow with faked CRM service context
+        /// </summary>
         [TestMethod]
         public void TestAccountDuplicatesWithFakes1()
         {
@@ -63,12 +68,15 @@ namespace TestWorkflow
             var codeActivity = new DuplicateChecker();
             var result = codeActivity.NumberOfDuplicates(ctx.GetOrganizationService(), "Name1");
 
-            Assert.AreEqual(0, result);
+            Assert.AreEqual( 0, result);
 
             result = codeActivity.NumberOfDuplicates(ctx.GetOrganizationService(), "Account One");
             Assert.AreEqual(1, result);
         }
 
+        /// <summary>
+        /// Test workflow activity with a Faked Workflow execution context.
+        /// </summary>
         [TestMethod]
         public void TestAccountDuplicatesWithFakes2()
         {
@@ -92,16 +100,16 @@ namespace TestWorkflow
             var wfContext = ctx.GetDefaultWorkflowContext();
             wfContext.MessageName = "Create";
             wfContext.PrimaryEntityId = account1.Id;
-            wfContext.PreEntityImages.Add("account", account1);
+            wfContext.PreEntityImages.Add("account",account1);
 
             var input = new Dictionary<string, object>();
-            //            input.Add("AccountReference", new EntityReference("account", account1.Id));
+//            input.Add("AccountReference", new EntityReference("account", account1.Id));
 
 
             var codeActivity = new DuplicateChecker();
             var result = ctx.ExecuteCodeActivity<DuplicateChecker>(wfContext, input, codeActivity);
 
-            Assert.IsTrue(result.ContainsKey("PossibleMatch"));
+            Assert.IsTrue( result.ContainsKey("PossibleMatch"));
             Assert.IsTrue((bool)result["PossibleMatch"]);
 
             //            Debugger.Break();         
