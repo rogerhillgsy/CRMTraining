@@ -110,6 +110,34 @@ namespace CRMTraining2.Workflows
             return result.Entities.Count;
         }
 
+        public int NumberOfDuplicates2(IOrganizationService service, string name)
+        {
+            var qe = new QueryExpression("account")
+            {
+                Criteria = new FilterExpression
+                {
+                    Conditions =
+                    {
+                        new ConditionExpression
+                        {
+                            AttributeName = "name",
+                            Operator = ConditionOperator.Equal,
+                            Values = {name}
+                        }
+                    },
+                },
+                //LinkEntities = { new LinkEntity
+                //{
+                //    na
+                //}},
+                ColumnSet = new ColumnSet(),
+            };
+
+            var result = service.RetrieveMultiple(qe);
+
+            return result.Entities.Count;
+        }
+
 
     }
 

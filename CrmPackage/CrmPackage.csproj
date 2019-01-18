@@ -99,7 +99,7 @@
       <WebResourceType>Script</WebResourceType>
     </CRMWebResource>
     <CRMWebResource Include="WebResources\Script %28JScript%29\showdataparams.js">
-      <DisplayName>qa/scripts/showdataparams.js</DisplayName>
+      <DisplayName>showdataparams.js</DisplayName>
       <UniqueName>rbh_/scripts/showdataparams.js</UniqueName>
       <WebResourceType>Script</WebResourceType>
       <WebResourceLanguage>English (United States)</WebResourceLanguage>

@@ -1,3 +1,6 @@
+function HelloWorld() {
+    alert("Hello World");
+}
 function getDataParam() {
 
     //Get the any query string parameters and load them into the vals array 
@@ -8,15 +11,7 @@ function getDataParam() {
 
         vals = location.search;
         parseDataValue(vals);
-
-
-
-
-
-
-
-
-    }
+   }
 
     function parseDataValue(datavalue) {
 
