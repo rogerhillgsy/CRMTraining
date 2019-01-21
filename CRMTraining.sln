@@ -12,7 +12,7 @@ Project("{88A30576-7583-4F75-8136-5EFD2C14ADFF}") = "CrmPackage", "CrmPackage\Cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins", "Plugins\Plugins.csproj", "{6CAEFD90-2CF5-47DC-A35A-17FED2071D35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customization", "Customization\Customization.csproj", "{246D83C4-77D5-4FD9-868D-AEAA02D84748}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default", "Customization\Default.CSPROJ", "{246D83C4-77D5-4FD9-868D-AEAA02D84748}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workflows", "Workflows\Workflows.csproj", "{A3615CFC-6EEB-4A2A-B7A3-68BDCFF7FC38}"
 EndProject
